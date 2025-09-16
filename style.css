@@ -1,0 +1,108 @@
+/* Navbar parent */
+.navbar {
+    background-color: #20b2aa; /* Teal/Turquoise from the bus */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* shadow */
+    padding: 0; /* remove default padding */
+  }
+  
+  /* Container inside navbar */
+  .navbar .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center; /* vertically center */
+  }
+  
+  /* Logo image */
+  .navbar img {
+    width: 80px; /* smaller logo */
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain;
+    margin: 0;
+    padding: 0; /* remove extra padding */
+  }
+  
+  /* Navigation links container */
+  .navbar .nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation links */
+  .navbar .nav-link {
+    font-size: 14px; /* smaller font */
+    padding: 8px 12px; /* smaller padding */
+    color: #586aad; /* Creamy white for good contrast on teal */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .navbar .nav-link:hover {
+    color: #ff8c00; /* Orange from the path in the image */
+  }
+  
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f2f2f2; /* Retaining a light grey, as the image uses subtle grays */
+    gap: 20px;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  
+  .about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333; /* Keeping dark text for readability */
+  }
+  
+  .text-slider {
+    position: relative;
+    width: 600px;  /* adjust to your layout */
+    height: 60px;
+    overflow: hidden;
+  }
+  .about-text{
+    width: 50%;
+  }
+
+  
+  .text-slider p {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: slideText 9s infinite;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* Delay each slide */
+  .text-slider p:nth-child(1) { animation-delay: 0s; }
+  .text-slider p:nth-child(2) { animation-delay: 3s; }
+  .text-slider p:nth-child(3) { animation-delay: 6s; }
+  
+  /* Animation */
+  @keyframes slideText {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  
+  
+  .about-image img {
+    
+    width: 100%;
+   
+    border-radius: 8px;
+  }
